@@ -88,7 +88,7 @@ Si tienes hojas completas con varias viñetas, recórtalas en imágenes individu
 
 ### 3. Las fotos — capítulo 4
 
-Pon tus fotos en `assets/fotos/` como `1.jpg`, `2.jpg`, `3.jpg`, `4.jpg` y escribe el pie de foto de cada una en `cap4.fotos`. Puedes agregar o quitar fotos de la lista.
+Crea la carpeta `assets/fotos/` y pon tus fotos como `1.jpg`, `2.jpg`, `3.jpg`, `4.jpg` y escribe el pie de foto de cada una en `cap4.fotos`. Puedes agregar o quitar fotos de la lista.
 
 ### 4. El reloj — `RELOJ`
 
