@@ -1,0 +1,4 @@
+# Hojas originales de manga: la página usa los recortes de assets/manga/vinetas/
+assets/manga/c*.jpg
+# No se usa: el video del reloj se reproduce desde reloj.mp4 / reloj.webm
+assets/reloj.gif

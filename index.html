@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Don't forget 3. Oct.</title>
+  <meta name="description" content="El reloj de Jz">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='34' r='24' fill='%23C9CED6' stroke='%23111' stroke-width='4'/%3E%3Cpath d='M32 34 L32 14' stroke='%23B3121B' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='34' r='4' fill='%23111'/%3E%3Crect x='28' y='2' width='8' height='7' rx='2' fill='%23C9CED6' stroke='%23111' stroke-width='3'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Caveat:wght@500;700&family=Cinzel:wght@500;700;900&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/reloj-abierto.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Escenario: el reloj fijo en el centro -->
+  <main id="escenario" class="escenario" data-estado="cerrado">
+    <div class="reloj-zona">
+      <div id="reloj" class="reloj" data-vista="poster">
+        <div class="reloj-flota">
+          <img class="capa capa-poster" src="assets/reloj-poster.jpg" alt="Reloj de bolsillo cerrado" draggable="false">
+          <img class="capa capa-abierto" src="assets/reloj-abierto.jpg" alt="Reloj de bolsillo abierto" draggable="false">
+          <video id="reloj-video" class="capa capa-video" poster="assets/reloj-poster.jpg"
+                 playsinline muted preload="metadata" aria-hidden="true">
+            <source src="assets/reloj.mp4" type="video/mp4">
+            <source src="assets/reloj.webm" type="video/webm">
+          </video>
+          <!-- Capa SVG alineada con la imagen del reloj (script.js ajusta el viewBox con RELOJ.ancho y RELOJ.alto) -->
+          <svg id="esfera" class="capa capa-esfera" viewBox="0 0 848 1264" xmlns="http://www.w3.org/2000/svg"
+               role="slider" tabindex="-1" aria-label="Manecilla del reloj"
+               aria-valuemin="1" aria-valuemax="12" aria-valuenow="12"></svg>
+        </div>
+      </div>
+    </div>
+    <p id="pista" class="pista" aria-live="polite"></p>
+  </main>
+
+  <!-- Capítulo: página de manga -->
+  <div id="capitulo" class="capitulo" role="dialog" aria-labelledby="titulo-cap" hidden>
+    <div class="capitulo-barra">
+      <button type="button" class="boton-volver" data-volver></button>
+    </div>
+    <div id="capitulo-scroll" class="capitulo-scroll">
+      <article id="pagina" class="pagina"></article>
+    </div>
+  </div>
+
+  <div id="destello" class="destello" aria-hidden="true"></div>
+  <div id="calibracion" class="calibracion" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
